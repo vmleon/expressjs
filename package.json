@@ -4,8 +4,9 @@
   "description": "Playing around with Node and Express JS",
   "main": "app.js",
   "scripts": {
+    "clean": "rimraf node_modules && npm cache clean",
     "lint": "jshint **/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node -v",
     "start": "node app.js"
   },
   "repository": {
@@ -26,6 +27,7 @@
     "express": "^4.14.0"
   },
   "devDependencies": {
-    "jshint": "^2.9.2"
+    "jshint": "^2.9.2",
+    "rimraf": "^2.5.4"
   }
 }

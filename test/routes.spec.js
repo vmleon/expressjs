@@ -1,5 +1,10 @@
-var expect = require('chai').expect;
+
 var request = require('request');
+
+var chai = require('chai');
+var expect = chai.expect;
+var should = chai.should;
+chai.use(require('chai-dom'));
 
 var base_url = "http://localhost:3000/";
 
@@ -14,7 +19,7 @@ describe('Testing routes to resources', function() {
     });
     it('should contain "Home Mealdowlark Travel" in the response body', function(done) {
       request(url, (err, response, body) => {
-        expect(body).to.equal('Home Mealdowlark Travel');
+        expect(document.querySelector('h1')).to.have.text('Home Mealdowlark Travel');
         done();
       });
     });

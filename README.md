@@ -11,3 +11,6 @@ Install dependencies:
 
 Start server:
 `npm start`
+
+Test server:
+`npm test`

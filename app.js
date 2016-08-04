@@ -6,6 +6,12 @@
 
   app.set('port', process.env.PORT || 3000);
 
+  app.get('/', (req, res) => {
+    res.type('text/plain');
+    res.status(200);
+    res.send('Home Mealdowlark Travel');
+  });
+
   app.use((req, res) => {
     res.type('text/plain');
     res.status(404);

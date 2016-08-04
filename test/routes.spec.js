@@ -18,6 +18,12 @@ describe('Testing routes to resources', function() {
         done();
       });
     });
+    it('should return 200 status when using parameters', function(done) {
+      request(url + "?foo=bar", (err, response) => {
+        expect(response.statusCode).to.equal(200);
+        done();
+      });
+    });
   });
 
   describe('About page', function() {
@@ -31,6 +37,12 @@ describe('Testing routes to resources', function() {
     it('should contain "About Mealdowlark Travel" in the response body', function(done) {
       request(url, (err, response, body) => {
         expect(body).to.equal('About Mealdowlark Travel');
+        done();
+      });
+    });
+    it('should return 200 status when using parameters', function(done) {
+      request(url + "?foo=bar", (err, response) => {
+        expect(response.statusCode).to.equal(200);
         done();
       });
     });

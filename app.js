@@ -12,6 +12,12 @@
     res.send('Home Mealdowlark Travel');
   });
 
+  app.get('/about', (req, res) => {
+    res.type('text/plain');
+    res.status(200);
+    res.send('About Mealdowlark Travel');
+  });
+
   app.use((req, res) => {
     res.type('text/plain');
     res.status(404);
